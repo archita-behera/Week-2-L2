@@ -1,114 +1,214 @@
 body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(to right, #0a4703, #f55742);
-    color: white;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #0a4703, #f55742);
+  color: white;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+  background: transparent;
+  color: black;
+  position: absolute;
+  width: 90%;
+  left: 54%;
+  transform: translateX(-50%);
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  margin-right: 150px;
+
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: black;
+  font-size: 1em;
+}
+
+.sign-up {
+  background: white;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.sign-up:hover {
+  background: #ddd;
+}
+
+/* 2-Column Section (Desktop) */
+.slider-container {
+  display: flex;
+  height: 80vh;
+  align-items: center;
+  justify-content: center;
+  padding: 70px;
+  background: linear-gradient(to right, #e63b23, #f56d42);
+}
+
+.content-col {
+  width: 40%;
+  padding: 20px;
+}
+
+.content-col h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+.content-col h2 {
+  font-size: 1.8em;
+}
+
+.content-col h3 {
+  font-size: 1.2em;
+  color: black;
+}
+
+.price {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.social-icons {
+  margin-top: 15px;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 1.5em;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+.image-col {
+  width: 50%;
+  position: relative;
+}
+
+img {
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  margin: auto;
+}
+
+.prev-btn, .next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.prev-btn { left: 50px; }
+.next-btn { right: 50px; }
+
+.prev-btn:hover, .next-btn:hover {
+  background: black;
+}
+
+.social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border: 2px solid white;
+  border-radius: 50%;
+  font-size: 1.5em;
+  margin-right: 10px;
+  text-decoration: none;
+  color: white;
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+  /* Hamburger Menu */
+  .hamburger {
+    display: block;
   }
-  
-  header {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 50px;
-    background: black;
-    color: white;
-    align-items: center;
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
-  
-  .logo {
-    font-size: 1.5em;
-    font-weight: bold;
-  }
-  
-  nav a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: white;
-    font-size: 1em;
-  }
-  
-  .sign-up {
-    background: white;
+
+  .nav-links a {
+    margin: 10px 0;
     color: black;
-    padding: 10px 20px;
-    border-radius: 25px;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
   }
-  
-  .sign-up:hover {
-    background: #ddd;
-  }
-  
-  .slider-container {
+
+  .nav-links.active {
     display: flex;
-    height: 80vh;
-    align-items: center;
-    justify-content: center;
-    padding: 50px;
-    background: linear-gradient(to right, #e63b23, #f56d42);
   }
-  
-  .content-col {
-    width: 50%;
+
+  /* 2-Column Section (Mobile) */
+  .slider-container {
+    flex-direction: column;
+    height: auto;
     padding: 20px;
   }
-  
-  .content-col h1 {
-    font-size: 2.5em;
-    font-weight: bold;
-  }
-  
-  .content-col p {
-    font-size: 1.2em;
-    margin: 10px 0;
-  }
-  
-  .price {
-    font-size: 2em;
-    font-weight: bold;
-    margin: 10px 0;
-  }
-  
-  .social-icons {
-    margin-top: 15px;
-  }
-  
-  .social-icons a {
-    color: white;
-    font-size: 1.5em;
-    margin-right: 10px;
-    text-decoration: none;
-  }
-  
-  .image-col {
-    width: 50%;
-    position: relative;
-  }
-  
-  img {
+
+  .content-col {
     width: 100%;
-    max-width: 400px;
-    display: block;
-    margin: auto;
+    text-align: center;
   }
-  
+
+  .image-col {
+    width: 100%;
+    margin-top: 20px;
+  }
+
   .prev-btn, .next-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.7);
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    font-size: 1.2em;
+    width: 40px;
+    height: 40px;
+    font-size: 1em;
   }
-  
-  .prev-btn { left: -50px; }
-  .next-btn { right: -50px; }
-  
-  .prev-btn:hover, .next-btn:hover {
-    background: black;
-  }
-  
+
+  .prev-btn { left: 10px; }
+  .next-btn { right: 10px; }
+}
